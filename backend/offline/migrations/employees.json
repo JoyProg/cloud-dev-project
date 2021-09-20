@@ -1,0 +1,66 @@
+[
+    {
+        "userId": "auth0|612e4b304b5511007111da98", 
+        "employeeId": "101",      
+        "name": "Joe Eric",
+        "employmentDate": "2021-09-05T20:01:45.424Z",
+        "departmentId": "1",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",    
+        "employeeId": "102",  
+        "name": "Anna Daniels",
+        "employmentDate": "2021-09-10T20:01:45.424Z",
+        "departmentId": "1",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",       
+        "employeeId": "103",
+        "name": "Ivan Greg",
+        "employmentDate": "2021-09-11T20:01:45.424Z",
+        "departmentId": "1",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"     
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",    
+        "employeeId": "104",   
+        "name": "Lisa Sommers",
+        "employmentDate": "2021-09-17T20:01:45.424Z",
+        "departmentId": "1",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",    
+        "employeeId": "105",   
+        "name": "Dennis Philip",
+        "employmentDate": "2021-09-18T20:01:45.424Z",
+        "departmentId": "1",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",   
+        "employeeId": "106",   
+        "name": "Jessica Luiz",
+        "employmentDate": "2021-09-19T20:01:45.424Z",
+        "departmentId": "2",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98", 
+        "employeeId": "107",   
+        "name": "Peter Lewis",
+        "employmentDate": "2021-09-10T20:01:45.424Z",
+        "departmentId": "2",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98", 
+        "employeeId": "108", 
+        "name": "Isaac Johnson",
+        "employmentDate": "2021-09-21T20:01:45.424Z",
+        "departmentId": "3",
+        "attachmentUrl": "https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"  
+    }
+]

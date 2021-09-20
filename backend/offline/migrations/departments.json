@@ -1,0 +1,20 @@
+[
+    {
+        "userId": "auth0|612e4b304b5511007111da98", 
+        "departmentId": "1",      
+        "name": "IT",
+        "description": "Handles technical tasks"
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",    
+        "departmentId": "2",   
+        "name": "Finance",
+        "description": "Handles financial aspect of the business"
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",       
+        "departmentId": "3",
+        "name": "Support",
+        "description": "Interacts with the clients to resolve issues"
+    }
+]

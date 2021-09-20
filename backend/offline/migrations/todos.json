@@ -1,0 +1,74 @@
+[
+    {
+        "userId": "auth0|612e4b304b5511007111da98", 
+        "todoId": "101",      
+        "createdAt": "2021-09-05T20:01:45.424Z",
+        "name": "Deploy locally",
+        "dueDate": "2021-09-05T20:01:45.424Z",
+        "done": true,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",    
+        "todoId": "102",   
+        "createdAt": "2021-09-07T20:01:45.424Z",
+        "name": "Study cloud developer",
+        "dueDate": "2021-09-10T20:01:45.424Z",
+        "done": false,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",       
+        "todoId": "103",
+        "createdAt": "2021-09-07T20:01:45.424Z",
+        "name": "Do laundry",
+        "dueDate": "2021-09-11T20:01:45.424Z",
+        "done": false,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"     
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",    
+        "todoId": "104",   
+        "createdAt": "2021-09-07T20:01:45.424Z",
+        "name": "Have lunch",
+        "dueDate": "2021-09-17T20:01:45.424Z",
+        "done": false,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",    
+        "todoId": "105",   
+        "createdAt": "2021-09-07T20:01:45.424Z",
+        "name": "Authenticate app",
+        "dueDate": "2021-09-18T20:01:45.424Z",
+        "done": false,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98",   
+        "todoId": "106",    
+        "createdAt": "2021-09-07T20:01:45.424Z",
+        "name": "Check up with colleague",
+        "dueDate": "2021-09-19T20:01:45.424Z",
+        "done": false,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98", 
+        "todoId": "107",       
+        "createdAt": "2021-09-07T20:01:45.424Z",
+        "name": "Read book",
+        "dueDate": "2021-09-10T20:01:45.424Z",
+        "done": false,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"  
+    },
+    {
+        "userId": "auth0|612e4b304b5511007111da98", 
+        "todoId": "108",      
+        "createdAt": "2021-09-07T20:01:45.424Z",
+        "name": "Review book",
+        "dueDate": "2021-09-21T20:01:45.424Z",
+        "done": false,
+        "attachmentUrl": "https://image.freepik.com/free-vector/illustration-list_53876-28518.jpg"  
+    }
+]

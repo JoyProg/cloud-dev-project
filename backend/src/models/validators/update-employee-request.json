@@ -1,0 +1,23 @@
+{
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title": "update-employee",
+    "type":"object",
+    "properties": {
+        "name":{
+            "type":"string",
+            "minLength": 3
+        },
+        "employmentDate":{
+            "type":"string"
+        },
+        "departmentId":{
+            "type":"string"
+        }
+    },
+    "required":[
+        "name",
+        "employmentDate",
+        "departmentId"
+    ],
+    "additionalProperties": false
+}

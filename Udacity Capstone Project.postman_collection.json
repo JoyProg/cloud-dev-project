@@ -1,0 +1,632 @@
+{
+	"info": {
+		"_postman_id": "a8eb09a0-b04e-44fa-8fb4-494743d82294",
+		"name": "Udacity Capstone Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Offline EMS",
+			"item": [
+				{
+					"name": "Department",
+					"item": [
+						{
+							"name": "Update department",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Support\",\r\n            \"description\": \"Interacts with the clients to resolve issues. Provides 24/7 service\"\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3003/dev/departments/3",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"departments",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create department",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3003/dev/departments",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"departments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete department",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "localhost:3003/dev/departments/3764707c-613f-44de-b24b-f2108e69d831",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"departments",
+										"3764707c-613f-44de-b24b-f2108e69d831"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all departments",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3003/dev/departments?limit=10",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"departments"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "Update employee",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lizzie Joseph\",\r\n    \"employmentDate\": \"2021-09-23T20:01:45.424Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3003/dev/employees/7fead000-4943-4736-b256-e21d3b80e356",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"employees",
+										"7fead000-4943-4736-b256-e21d3b80e356"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create employee",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lizzie Janis\",\r\n    \"departmentId\": \"1\",\r\n    \"employmentDate\": \"2021-09-15T20:01:45.424Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3003/dev/employees",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete employee",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "localhost:3003/dev/employees/7fead000-4943-4736-b256-e21d3b80e356",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"employees",
+										"7fead000-4943-4736-b256-e21d3b80e356"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get employees for a department",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:3003/dev/departments/1/employees?limit=5",
+									"host": [
+										"localhost"
+									],
+									"port": "3003",
+									"path": [
+										"dev",
+										"departments",
+										"1",
+										"employees"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "EMS",
+			"item": [
+				{
+					"name": "Department",
+					"item": [
+						{
+							"name": "Update department",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Support\",\r\n            \"description\": \"Interacts with the clients to resolve issues. Provides 24/7 service\"\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/departments/3",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"departments",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create department",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/departments",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"departments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete department",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/departments/3764707c-613f-44de-b24b-f2108e69d831",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"departments",
+										"3764707c-613f-44de-b24b-f2108e69d831"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all departments",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/departments?limit=10",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"departments"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "Update employee",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lizzie Joseph\",\r\n    \"employmentDate\": \"2021-09-23T20:01:45.424Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/employees/7fead000-4943-4736-b256-e21d3b80e356",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"employees",
+										"7fead000-4943-4736-b256-e21d3b80e356"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create employee",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Lizzie Janis\",\r\n    \"departmentId\": \"1\",\r\n    \"employmentDate\": \"2021-09-15T20:01:45.424Z\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/employees",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"employees"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete employee",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/employees/7fead000-4943-4736-b256-e21d3b80e356",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"employees",
+										"7fead000-4943-4736-b256-e21d3b80e356"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get employees for a department",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{authToken}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/departments/1/employees?limit=5",
+									"protocol": "https",
+									"host": [
+										"{{apiId}}",
+										"execute-api",
+										"us-east-1",
+										"amazonaws",
+										"com"
+									],
+									"path": [
+										"dev",
+										"departments",
+										"1",
+										"employees"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiId",
+			"value": "u3z26th53l"
+		},
+		{
+			"key": "helloApiId",
+			"value": ""
+		},
+		{
+			"key": "prodApiId",
+			"value": ""
+		},
+		{
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjBGamVYbldNS01kdDd2U1dIOHZnTSJ9.eyJpc3MiOiJodHRwczovL2Rldi10eTB2NWw4MS51cy5hdXRoMC5jb20vIiwic3ViIjoiYXV0aDB8NjEyZTRiMzA0YjU1MTEwMDcxMTFkYTk4IiwiYXVkIjoiajg5VllZVXNKWFVKcm1DM2F0RHhkODlFWURYZXlNZU8iLCJpYXQiOjE2MzIwNTEzNjIsImV4cCI6MTYzMjQ4MzM2MiwiYXRfaGFzaCI6IlpKZk9IOHNLR19iY25aSDd3VTExUHciLCJub25jZSI6IjNWQVliLk5JMl9jSzQ0Y2VVdzR5b21lTWouN2lxNWN-In0.S6URRR4aM0hMIn7X4-82D_5kBoJnipwoMLPGTM2P6oBe41vjEqO5pDZYkhAVGOkWjCqxAWR8sy8eawipctz6lWHdi-v4XNm5HVWfpPoVgs_5sLB1gU4jUXfBDScxSODmnq2KzInyPqJpiBs328oninzMdEmX-5aJ_RVnxAhIXC-s8JY1PafIXs4bUQMixKI-bbTBB22JJB8Q0VtQEkAOQb3_Vcwuolv1mwjhbkgjB0d-XtIYnoZ2MZhRiWMtoIyiOIFaktzM00Ho4z2FQ_DIeMlQRPLauefOuJovgnJww2xR0iQZThJGGMOVxbr6qSaII4V0306uJ24E_t4EdVV8XA"
+		}
+	]
+}

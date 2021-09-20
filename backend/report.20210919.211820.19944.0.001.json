@@ -1,0 +1,343 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20210919.211820.19944.0.001.json",
+    "dumpEventTime": "2021-09-19T21:18:20Z",
+    "dumpEventTimeStamp": "1632082700580",
+    "processId": 19944,
+    "cwd": "D:\\repo\\Udacity\\udacity-cloud-dev\\cloud-dev-project\\backend",
+    "commandLine": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\Joy\\AppData\\Roaming\\npm/node_modules/serverless/bin/serverless.js",
+      "offline"
+    ],
+    "nodejsVersion": "v12.0.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "win32",
+    "componentVersions": {
+      "node": "12.0.0",
+      "v8": "7.4.288.21-node.16",
+      "uv": "1.28.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.38.0",
+      "napi": "4",
+      "llhttp": "1.1.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1b",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.0.0/node-v12.0.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.0.0/node-v12.0.0.tar.gz",
+      "libUrl": "https://nodejs.org/download/release/v12.0.0/win-x64/node.lib"
+    },
+    "osName": "Windows_NT",
+    "osRelease": "10.0.19042",
+    "osVersion": "Windows 10 Enterprise",
+    "osMachine": "x86_64",
+    "host": "DESKTOP-59EDLBK"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x00007ff744e14f99",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+9161"
+    },
+    {
+      "pc": "0x00007ff744e18986",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+23990"
+    },
+    {
+      "pc": "0x00007ff744e17915",
+      "symbol": "std::basic_ostream<char,std::char_traits<char> >::operator<<+19781"
+    },
+    {
+      "pc": "0x00007ff744eff852",
+      "symbol": "uv_loop_fork+47890"
+    },
+    {
+      "pc": "0x00007ff74522c7ae",
+      "symbol": "v8::internal::Parser::ReportMessageAt+206"
+    },
+    {
+      "pc": "0x00007ff74520082a",
+      "symbol": "v8::internal::wasm::StreamingDecoder::Fail+666"
+    },
+    {
+      "pc": "0x00007ff745296c9c",
+      "symbol": "v8::internal::Heap::CreateFillerObjectAt+2972"
+    },
+    {
+      "pc": "0x00007ff74529ea0f",
+      "symbol": "v8::internal::LocalEmbedderHeapTracer::NotifyV8MarkingWorklistWasEmpty+5375"
+    },
+    {
+      "pc": "0x00007ff745295083",
+      "symbol": "v8::internal::Heap::CollectGarbage+1235"
+    },
+    {
+      "pc": "0x00007ff745293784",
+      "symbol": "v8::internal::GCTracer::AddScopeSample+1316"
+    },
+    {
+      "pc": "0x00007ff7452d43b3",
+      "symbol": "v8::internal::Factory::NewFillerObject+67"
+    },
+    {
+      "pc": "0x00007ff7455fad06",
+      "symbol": "v8::internal::OptimizingCompileDispatcher::Unblock+116966"
+    },
+    {
+      "pc": "0x00007ff745a93916",
+      "symbol": "v8::internal::NativesCollection<0>::GetScriptsSource+660214"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2147471360,
+    "totalCommittedMemory": 2147471360,
+    "usedMemory": 2089967632,
+    "availableMemory": 52874488,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 524288,
+        "committedMemory": 524288,
+        "capacity": 523976,
+        "used": 31712,
+        "available": 492264
+      },
+      "new_space": {
+        "memorySize": 2097152,
+        "committedMemory": 2097152,
+        "capacity": 1047952,
+        "used": 453128,
+        "available": 594824
+      },
+      "old_space": {
+        "memorySize": 865198080,
+        "committedMemory": 865198080,
+        "capacity": 813173480,
+        "used": 812777968,
+        "available": 395512
+      },
+      "code_space": {
+        "memorySize": 3833856,
+        "committedMemory": 3833856,
+        "capacity": 3039904,
+        "used": 3039904,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 22024192,
+        "committedMemory": 22024192,
+        "capacity": 20517280,
+        "used": 20517280,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 1253171200,
+        "committedMemory": 1253171200,
+        "capacity": 1252597336,
+        "used": 1252597336,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 622592,
+        "committedMemory": 622592,
+        "capacity": 550304,
+        "used": 550304,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 0,
+        "committedMemory": 0,
+        "capacity": 1047952,
+        "used": 0,
+        "available": 1047952
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 655.14,
+    "kernelCpuSeconds": 49.812,
+    "cpuConsumptionPercent": 3.81839,
+    "maxRss": 1748398080,
+    "pageFaults": {
+      "IORequired": 2355403,
+      "IONotRequired": 0
+    },
+    "fsActivity": {
+      "reads": 15544,
+      "writes": 36
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "=C:": "C:\\",
+    "ACLOCAL_PATH": "C:\\Program Files\\Git\\mingw64\\share\\aclocal;C:\\Program Files\\Git\\usr\\share\\aclocal",
+    "ALLUSERSPROFILE": "C:\\ProgramData",
+    "APPDATA": "C:\\Users\\Joy\\AppData\\Roaming",
+    "ATTACHMENTS_BUCKET": "serverless-employees-attachments-url-dev-us-east-1",
+    "AWS_DEFAULT_REGION": "us-east-1",
+    "AWS_LAMBDA_FUNCTION_MEMORY_SIZE": "1024",
+    "AWS_LAMBDA_FUNCTION_NAME": "serverless-ems-app-dev-GetEmployees",
+    "AWS_LAMBDA_FUNCTION_VERSION": "$LATEST",
+    "AWS_LAMBDA_LOG_GROUP_NAME": "/aws/lambda/serverless-ems-app-dev-GetEmployees",
+    "AWS_LAMBDA_LOG_STREAM_NAME": "2016/12/02/[$LATEST]f77ff5e4026c45bda9a9ebcec6bc9cad",
+    "AWS_REGION": "us-east-1",
+    "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\crashpad_16064_JRIBIPBPAQOCQDQM",
+    "COLORTERM": "truecolor",
+    "COMMONPROGRAMFILES": "C:\\Program Files\\Common Files",
+    "COMPUTERNAME": "DESKTOP-59EDLBK",
+    "COMSPEC": "C:\\Windows\\system32\\cmd.exe",
+    "CONFIG_SITE": "C:/Program Files/Git/mingw64/etc/config.site",
+    "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
+    "ChocolateyLastPathUpdate": "132705749999612123",
+    "CommonProgramFiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "CommonProgramW6432": "C:\\Program Files\\Common Files",
+    "DEPARTMENTS_TABLE": "Departments-dev",
+    "DEPARTMENT_ID_INDEX": "DepartmentIdIndex",
+    "DISPLAY": "needs-to-be-defined",
+    "DokanLibrary1": "C:\\Program Files\\Dokan\\Dokan Library-1.4.0\\",
+    "DokanLibrary1_LibraryPath_x64": "C:\\Program Files\\Dokan\\Dokan Library-1.4.0\\lib\\",
+    "DokanLibrary1_LibraryPath_x86": "C:\\Program Files\\Dokan\\Dokan Library-1.4.0\\x86\\lib\\",
+    "DriverData": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "EMPLOYEES_TABLE": "Employees-dev",
+    "EMPLOYMENT_DATE_INDEX": "EmploymentDateIndex",
+    "EXEPATH": "C:\\Program Files\\Git\\bin",
+    "GIT_ASKPASS": "c:\\Users\\Joy\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass.sh",
+    "GIT_PS1_SHOWDIRTYSTATE": "1",
+    "GOPATH": "C:\\Users\\Joy\\go",
+    "HOME": "C:\\Users\\Joy",
+    "HOMEDRIVE": "C:",
+    "HOMEPATH": "\\Users\\Joy",
+    "HOSTNAME": "DESKTOP-59EDLBK",
+    "INFOPATH": "C:\\Program Files\\Git\\usr\\local\\info;C:\\Program Files\\Git\\usr\\share\\info;C:\\Program Files\\Git\\usr\\info;C:\\Program Files\\Git\\share\\info",
+    "IS_OFFLINE": "true",
+    "LAMBDA_RUNTIME_DIR": "/var/runtime",
+    "LAMBDA_TASK_ROOT": "/var/task",
+    "LANG": "en_US.UTF-8",
+    "LD_LIBRARY_PATH": "/usr/local/lib64/node-v4.3.x/lib:/lib64:/usr/lib64:/var/runtime:/var/runtime/lib:/var/task:/var/task/lib",
+    "LOCALAPPDATA": "C:\\Users\\Joy\\AppData\\Local",
+    "LOGONSERVER": "\\\\DESKTOP-59EDLBK",
+    "MANPATH": "C:\\Program Files\\Git\\mingw64\\local\\man;C:\\Program Files\\Git\\mingw64\\share\\man;C:\\Program Files\\Git\\usr\\local\\man;C:\\Program Files\\Git\\usr\\share\\man;C:\\Program Files\\Git\\usr\\man;C:\\Program Files\\Git\\share\\man",
+    "MINGW_CHOST": "x86_64-w64-mingw32",
+    "MINGW_PACKAGE_PREFIX": "mingw-w64-x86_64",
+    "MINGW_PREFIX": "C:/Program Files/Git/mingw64",
+    "MSYSTEM": "MINGW64",
+    "MSYSTEM_CARCH": "x86_64",
+    "MSYSTEM_CHOST": "x86_64-w64-mingw32",
+    "MSYSTEM_PREFIX": "C:/Program Files/Git/mingw64",
+    "NODE_PATH": "/var/runtime:/var/task:/var/runtime/node_modules",
+    "NUMBER_OF_PROCESSORS": "12",
+    "NVM_HOME": "C:\\Users\\Joy\\AppData\\Roaming\\nvm",
+    "NVM_SYMLINK": "C:\\Program Files\\nodejs",
+    "OLDPWD": "D:/repo/Udacity/udacity-cloud-dev/cloud-dev-project",
+    "ORIGINAL_PATH": "C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Joy\\bin;C:\\Program Files\\Python39\\Scripts;C:\\Program Files\\Python39;D:\\Oracle\\client\\product\\11.2.0\\client_1\\bin;D:\\app\\Joy\\product\\11.2.0\\client_1\\bin;D:\\Oracle\\Oracle_Client_11g;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Windows\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn;C:\\Program Files (x86)\\dotnet;C:\\Program Files\\PostgreSQL\\12\\bin;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\Amazon\\AWSCLIV2;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;%NVM_HOME%;%NVM_SYMLINK%;C:\\Program Files\\Go\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Joy\\AppData\\Local\\Programs\\Python\\Python39\\Scripts;C:\\Users\\Joy\\AppData\\Local\\Programs\\Python\\Python39;C:\\Users\\Joy\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Joy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Joy\\AppData\\Roaming\\npm;C:\\Users\\Joy\\.dotnet\\tools;C:\\Users\\Joy\\.ebcli-virtual-env\\executables;C:\\Users\\Joy\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\UnixUtils\\usr\\local\\wbin;C:\\Users\\Joy\\go\\bin;C:\\Program Files\\IBM\\Cloud\\bin",
+    "ORIGINAL_TEMP": "C:/Users/Joy/AppData/Local/Temp",
+    "ORIGINAL_TMP": "C:/Users/Joy/AppData/Local/Temp",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+    "OS": "Windows_NT",
+    "OneDrive": "C:\\Users\\Joy\\OneDrive",
+    "OneDriveConsumer": "C:\\Users\\Joy\\OneDrive",
+    "PATH": "C:\\Users\\Joy\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\local\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\mingw64\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\Joy\\bin;C:\\Program Files\\Python39\\Scripts;C:\\Program Files\\Python39;D:\\Oracle\\client\\product\\11.2.0\\client_1\\bin;D:\\app\\Joy\\product\\11.2.0\\client_1\\bin;D:\\Oracle\\Oracle_Client_11g;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0;C:\\Windows\\System32\\OpenSSH;C:\\Program Files\\Git\\cmd;C:\\Program Files\\dotnet;C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\150\\Tools\\Binn;C:\\Program Files\\Microsoft SQL Server\\150\\DTS\\Binn;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\DTS\\Binn;C:\\Program Files (x86)\\dotnet;C:\\Program Files\\PostgreSQL\\12\\bin;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\HashiCorp\\Vagrant\\bin;C:\\Program Files\\Amazon\\AWSCLIV2;C:\\Program Files\\Docker\\Docker\\resources\\bin;C:\\ProgramData\\DockerDesktop\\version-bin;%NVM_HOME%;%NVM_SYMLINK%;C:\\Program Files\\Go\\bin;C:\\ProgramData\\chocolatey\\bin;C:\\Users\\Joy\\AppData\\Local\\Programs\\Python\\Python39\\Scripts;C:\\Users\\Joy\\AppData\\Local\\Programs\\Python\\Python39;C:\\Users\\Joy\\AppData\\Local\\Microsoft\\WindowsApps;C:\\Users\\Joy\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Joy\\AppData\\Roaming\\npm;C:\\Users\\Joy\\.dotnet\\tools;C:\\Users\\Joy\\.ebcli-virtual-env\\executables;C:\\Users\\Joy\\AppData\\Roaming\\nvm;C:\\Program Files\\nodejs;C:\\Program Files (x86)\\UnixUtils\\usr\\local\\wbin;C:\\Users\\Joy\\go\\bin;C:\\Program Files\\IBM\\Cloud\\bin;C:\\Program Files\\Git\\usr\\bin\\vendor_perl;C:\\Program Files\\Git\\usr\\bin\\core_perl",
+    "PATHEXT": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC",
+    "PKG_CONFIG_PATH": "C:\\Program Files\\Git\\mingw64\\lib\\pkgconfig;C:\\Program Files\\Git\\mingw64\\share\\pkgconfig",
+    "PLINK_PROTOCOL": "ssh",
+    "PROCESSOR_ARCHITECTURE": "AMD64",
+    "PROCESSOR_IDENTIFIER": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "PROCESSOR_LEVEL": "6",
+    "PROCESSOR_REVISION": "9e0a",
+    "PROGRAMFILES": "C:\\Program Files",
+    "PSModulePath": "C:\\Program Files\\WindowsPowerShell\\Modules;C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules;C:\\Program Files (x86)\\Microsoft SQL Server\\150\\Tools\\PowerShell\\Modules\\",
+    "PUBLIC": "C:\\Users\\Public",
+    "PWD": "D:/repo/Udacity/udacity-cloud-dev/cloud-dev-project/backend",
+    "ProgramData": "C:\\ProgramData",
+    "ProgramFiles(x86)": "C:\\Program Files (x86)",
+    "ProgramW6432": "C:\\Program Files",
+    "SESSIONNAME": "Console",
+    "SHELL": "C:\\Program Files\\Git\\usr\\bin\\bash.exe",
+    "SHLVL": "1",
+    "SSH_ASKPASS": "C:/Program Files/Git/mingw64/libexec/git-core/git-gui--askpass",
+    "SYSTEMDRIVE": "C:",
+    "SYSTEMROOT": "C:\\Windows",
+    "TEMP": "C:\\Users\\Joy\\AppData\\Local\\Temp",
+    "TERM": "xterm-256color",
+    "TERM_PROGRAM": "vscode",
+    "TERM_PROGRAM_VERSION": "1.60.1",
+    "TMP": "C:\\Users\\Joy\\AppData\\Local\\Temp",
+    "TMPDIR": "C:\\Users\\Joy\\AppData\\Local\\Temp",
+    "USERDOMAIN": "DESKTOP-59EDLBK",
+    "USERDOMAIN_ROAMINGPROFILE": "DESKTOP-59EDLBK",
+    "USERNAME": "Joy",
+    "USERPROFILE": "C:\\Users\\Joy",
+    "VBOX_MSI_INSTALL_PATH": "C:\\Program Files\\Oracle\\VirtualBox\\",
+    "VSCODE_GIT_ASKPASS_MAIN": "c:\\Users\\Joy\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\git\\dist\\askpass-main.js",
+    "VSCODE_GIT_ASKPASS_NODE": "C:\\Users\\Joy\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+    "VSCODE_GIT_IPC_HANDLE": "\\\\.\\pipe\\vscode-git-cbd0891d88-sock",
+    "WINDIR": "C:\\Windows",
+    "ZES_ENABLE_SYSMAN": "1",
+    "_HANDLER": "src/lambda/http/getEmployees.handler"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\Windows\\SYSTEM32\\ntdll.dll",
+    "C:\\Program Files\\Avast Software\\Avast\\aswhook.dll",
+    "C:\\Windows\\System32\\KERNEL32.DLL",
+    "C:\\Windows\\System32\\KERNELBASE.dll",
+    "C:\\Windows\\System32\\WS2_32.dll",
+    "C:\\Windows\\System32\\RPCRT4.dll",
+    "C:\\Windows\\System32\\ADVAPI32.dll",
+    "C:\\Windows\\System32\\msvcrt.dll",
+    "C:\\Windows\\System32\\sechost.dll",
+    "C:\\Windows\\System32\\USER32.dll",
+    "C:\\Windows\\System32\\win32u.dll",
+    "C:\\Windows\\SYSTEM32\\dbghelp.dll",
+    "C:\\Windows\\System32\\GDI32.dll",
+    "C:\\Windows\\System32\\ucrtbase.dll",
+    "C:\\Windows\\System32\\gdi32full.dll",
+    "C:\\Windows\\System32\\msvcp_win.dll",
+    "C:\\Windows\\System32\\PSAPI.DLL",
+    "C:\\Windows\\System32\\CRYPT32.dll",
+    "C:\\Windows\\System32\\bcrypt.dll",
+    "C:\\Windows\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\Windows\\SYSTEM32\\USERENV.dll",
+    "C:\\Windows\\SYSTEM32\\WINMM.dll",
+    "C:\\Windows\\System32\\IMM32.DLL",
+    "C:\\Windows\\SYSTEM32\\powrprof.dll",
+    "C:\\Windows\\SYSTEM32\\UMPDC.dll",
+    "C:\\Windows\\system32\\uxtheme.dll",
+    "C:\\Windows\\System32\\combase.dll",
+    "C:\\Windows\\system32\\mswsock.dll",
+    "C:\\Windows\\SYSTEM32\\kernel.appcore.dll",
+    "C:\\Windows\\System32\\bcryptprimitives.dll",
+    "C:\\Windows\\SYSTEM32\\CRYPTBASE.DLL",
+    "C:\\Windows\\System32\\NSI.dll",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc6.DLL",
+    "C:\\Windows\\SYSTEM32\\dhcpcsvc.DLL",
+    "C:\\Windows\\SYSTEM32\\DNSAPI.dll",
+    "C:\\Windows\\system32\\napinsp.dll",
+    "C:\\Windows\\system32\\pnrpnsp.dll",
+    "C:\\Windows\\system32\\wshbth.dll",
+    "C:\\Windows\\system32\\NLAapi.dll",
+    "C:\\Windows\\System32\\winrnr.dll",
+    "C:\\Windows\\System32\\rasadhlp.dll",
+    "C:\\Windows\\System32\\fwpuclnt.dll"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title": "create-department",
+    "type":"object",
+    "properties": {
+        "userId": {
+            "type": "string"
+        },
+        "departmentId": {
+            "type": "string"
+        },
+        "name":{
+            "type":"string",
+            "minLength": 3
+        },
+        "description":{
+            "type":"string",
+            "minLength": 3
+        }
+    },
+    "required":[
+        "name",
+        "description"
+    ],
+    "additionalProperties": false
+}

@@ -1,0 +1,32 @@
+{
+    "$schema" : "http://json-schema.org/draft-04/schema#",
+    "title": "create-employee",
+    "type":"object",
+    "properties": {
+        "userId": {
+            "type": "string"
+        },
+        "employeeId": {
+            "type": "string"
+        },
+        "createdAt": {
+            "type": "string"
+        },
+        "name":{
+            "type":"string",
+            "minLength": 3
+        },
+        "employmentDate":{
+            "type":"string"
+        },
+        "departmentId": {
+            "type": "string"
+        }
+    },
+    "required":[
+        "name",
+        "employmentDate",
+        "departmentId"
+    ],
+    "additionalProperties": false
+}
