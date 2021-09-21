@@ -23,7 +23,6 @@ provider:
   environment:
     DEPARTMENTS_TABLE: Departments-${self:provider.stage}
     EMPLOYEES_TABLE: Employees-${self:provider.stage}
-    #TODOS_TABLE: Todos-${self:provider.stage}
     DEPARTMENT_ID_INDEX: DepartmentIdIndex
     EMPLOYMENT_DATE_INDEX: EmploymentDateIndex
     ATTACHMENTS_BUCKET: serverless-employees-attachments-url-${self:provider.stage}-${self:provider.region}
@@ -135,41 +134,6 @@ functions:
         Action: [ s3:PutObject ]
         Resource: arn:aws:s3:::${self:provider.environment.ATTACHMENTS_BUCKET}/*
 
-  UpdateEmployee:
-    handler: src/lambda/http/updateEmployee.handler
-    events:
-      - http:
-          method: patch
-          path: employees/{employeeId}
-          cors: true
-          uthorizer: Auth
-          reqValidatorName: RequestBodyValidator
-          documentation:
-            summary: Update a new employee
-            description: Update a new employee
-            requestModels:
-              'application/json': UpdateEmployeeRequest
-      - http:
-          method: put 
-          path: employees/{employeeId}
-          cors: true
-          authorizer: Auth
-          allowCredentials: true
-          reqValidatorName: RequestBodyValidator
-          documentation:
-            summary: Update a new employee
-            description: Update a new employee
-            requestModels:
-              'application/json': UpdateEmployeeRequest
-    iamRoleStatementsInherit: true 
-    iamRoleStatementsName: update-employee-role-function
-    iamRoleStatements:
-      - Effect: Allow 
-        Action:
-          - dynamodb:Query
-          - dynamodb:UpdateItem
-        Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.EMPLOYEES_TABLE}
-
   DeleteEmployee:
     handler: src/lambda/http/deleteEmployee.handler
     events:
@@ -226,95 +190,8 @@ functions:
           - dynamodb:PutItem 
         Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.DEPARTMENTS_TABLE}
 
-  UpdateDepartment:
-    handler: src/lambda/http/updateDepartment.handler
-    events:
-      - http:
-          method: patch
-          path: departments/{departmentId}
-          cors: true
-          uthorizer: Auth
-          reqValidatorName: RequestBodyValidator
-          documentation:
-            summary: Update a new department
-            description: Update a new department
-            requestModels:
-              'application/json': UpdateDepartmentRequest
-      - http:
-          method: put 
-          path: departments/{departmentId}
-          cors: true
-          authorizer: Auth
-          allowCredentials: true
-          reqValidatorName: RequestBodyValidator
-          documentation:
-            summary: Update a new department
-            description: Update a new department
-            requestModels:
-              'application/json': UpdateDepartmentRequest
-    iamRoleStatementsInherit: true 
-    iamRoleStatementsName: update-department-role-function
-    iamRoleStatements:
-      - Effect: Allow 
-        Action:
-          - dynamodb:Query
-          - dynamodb:UpdateItem
-        Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.DEPARTMENTS_TABLE}
-
-  DeleteDepartment:
-    handler: src/lambda/http/deleteDepartment.handler
-    events:
-      - http:
-          method: delete
-          path: departments/{departmentId}
-          cors: true
-          authorizer: Auth
-    iamRoleStatementsInherit: true
-    iamRoleStatementsName: delete-department-role-function
-    iamRoleStatements:
-      - Effect: Allow 
-        Action:
-          - dynamodb:Query
-          - dynamodb:DeleteItem
-        Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.DEPARTMENTS_TABLE}
-
-
-  # TODO: Configure this function
-  # GenerateUploadUrl:
-  #   handler: src/lambda/http/generateUploadUrl.handler
-  #   events:
-  #     - http:
-  #         method: post
-  #         path: employees/{employeeId}/attachment
-  #         cors: true
-  #         authorizer: Auth
-  #   iamRoleStatementsInherit: true
-  #   iamRoleStatementsName: generate-upload-url-role
-  #   iamRoleStatements:
-  #     - Effect: Allow 
-  #       Action:
-  #         - dynamodb:GetItem
-  #         - dynamodb:Query
-  #         - dynamodb:UpdateItem
-  #       Resource: arn:aws:dynamodb:${self:provider.region}:*:table/${self:provider.environment.EMPLOYEES_TABLE}
-  #     - Effect: Allow
-  #       Action: [ s3:PutObject ]
-  #       Resource: arn:aws:s3:::${self:provider.environment.ATTACHMENTS_BUCKET}/*
-
-  # SyncWithElasticsearch:
-  #   environment:
-  #     ES_ENDPOINT: !GetAtt TodosSearch.DomainEndpoint
-  #   handler: src/lambda/dynamoDb/elasticSearchSync.handler
-  #   events:
-  #     - stream:
-  #         type: dynamodb 
-  #         arn: !GetAtt TodosTable.StreamArn
-  #   iamRoleStatementsName: sync-with-elasticsearch-role      
-  #   iamRoleStatementsInherit: true
-
 resources:
   Resources:
-    # TODO: Add any necessary AWS resources
     GatewayResponseDefault4XX:
       Type: AWS::ApiGateway::GatewayResponse
       Properties:
@@ -380,37 +257,7 @@ resources:
                 KeyType: RANGE
             Projection:
               ProjectionType: ALL # What attributes will be copied to an index
-        
-    
-    # TodosTable:
-    #   Type: AWS::DynamoDB::Table
-    #   Properties:
-    #     AttributeDefinitions:
-    #       - AttributeName: userId
-    #         AttributeType: S
-    #       - AttributeName: todoId
-    #         AttributeType: S
-    #       - AttributeName: createdAt
-    #         AttributeType: S
-    #     KeySchema:
-    #       - AttributeName: userId
-    #         KeyType: HASH
-    #       - AttributeName: todoId
-    #         KeyType: RANGE
-    #     BillingMode: PAY_PER_REQUEST
-    #     StreamSpecification:
-    #       StreamViewType: NEW_IMAGE
-    #     TableName: ${self:provider.environment.TODOS_TABLE}
-    #     LocalSecondaryIndexes:
-    #       - IndexName: ${self:provider.environment.TODOS_CREATED_AT_INDEX}
-    #         KeySchema:
-    #           - AttributeName: userId
-    #             KeyType: HASH
-    #           - AttributeName: createdAt
-    #             KeyType: RANGE
-    #         Projection:
-    #           ProjectionType: ALL # What attributes will be copied to an index
-    
+            
     RequestBodyValidator:
       Type: AWS::ApiGateway::RequestValidator
       Properties:
@@ -450,39 +297,6 @@ resources:
             Principal: '*'
             Action: 's3:GetObject'           
             Resource: arn:aws:s3:::${self:provider.environment.ATTACHMENTS_BUCKET}/*
-
-    # TodosSearch:
-    #   Type: AWS::Elasticsearch::Domain
-    #   Properties:
-    #     ElasticsearchVersion: '6.3'
-    #     DomainName: todos-search-app-${self:provider.stage}
-    #     ElasticsearchClusterConfig:
-    #       DedicatedMasterEnabled: false
-    #       InstanceCount: '1'
-    #       ZoneAwarenessEnabled: false
-    #       InstanceType: t2.small.elasticsearch
-    #     EBSOptions:
-    #       EBSEnabled: true
-    #       Iops: 0
-    #       VolumeSize: 10
-    #       VolumeType: 'gp2'
-    #     AccessPolicies:
-    #       Version: '2012-10-17'
-    #       Statement:
-    #         - Effect: Allow
-    #           Principal:
-    #             AWS: !Sub 'arn:aws:sts::${AWS::AccountId}:assumed-role/${self:service}-${self:provider.stage}-${self:provider.region}-lambdaRole/serverless-todo-app-${self:provider.stage}-SyncWithElasticsearch'
-    #           Action: ['es:ESHttp*']
-    #           Resource: !Sub 'arn:aws:es:${self:provider.region}:${AWS::AccountId}:domain/todos-search-app-${self:provider.stage}/*'
-    #         - Effect: Allow
-    #           Principal:
-    #             AWS: '*'
-    #           Action: ['es:ESHttp*']
-    #           Resource: !Sub 'arn:aws:es:${self:provider.region}:${AWS::AccountId}:domain/todos-search-app-${self:provider.stage}/*'
-    #           Condition:
-    #             IpAddress:
-    #               aws:SourceIp:
-    #                 - ipAddr
             
 
 

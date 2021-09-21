@@ -12,41 +12,6 @@
 					"name": "Department",
 					"item": [
 						{
-							"name": "Update department",
-							"request": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{authToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n            \"name\": \"Support\",\r\n            \"description\": \"Interacts with the clients to resolve issues. Provides 24/7 service\"\r\n        }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:3003/dev/departments/3",
-									"host": [
-										"localhost"
-									],
-									"port": "3003",
-									"path": [
-										"dev",
-										"departments",
-										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Create department",
 							"request": {
 								"method": "POST",
@@ -75,36 +40,6 @@
 									"path": [
 										"dev",
 										"departments"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete department",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{authToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
-								"url": {
-									"raw": "localhost:3003/dev/departments/3764707c-613f-44de-b24b-f2108e69d831",
-									"host": [
-										"localhost"
-									],
-									"port": "3003",
-									"path": [
-										"dev",
-										"departments",
-										"3764707c-613f-44de-b24b-f2108e69d831"
 									]
 								}
 							},
@@ -146,41 +81,6 @@
 				{
 					"name": "Employee",
 					"item": [
-						{
-							"name": "Update employee",
-							"request": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{authToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Lizzie Joseph\",\r\n    \"employmentDate\": \"2021-09-23T20:01:45.424Z\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "localhost:3003/dev/employees/7fead000-4943-4736-b256-e21d3b80e356",
-									"host": [
-										"localhost"
-									],
-									"port": "3003",
-									"path": [
-										"dev",
-										"employees",
-										"7fead000-4943-4736-b256-e21d3b80e356"
-									]
-								}
-							},
-							"response": []
-						},
 						{
 							"name": "Create employee",
 							"request": {
@@ -289,45 +189,6 @@
 					"name": "Department",
 					"item": [
 						{
-							"name": "Update department",
-							"request": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{authToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n            \"name\": \"Support\",\r\n            \"description\": \"Interacts with the clients to resolve issues. Provides 24/7 service\"\r\n        }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/departments/3",
-									"protocol": "https",
-									"host": [
-										"{{apiId}}",
-										"execute-api",
-										"us-east-1",
-										"amazonaws",
-										"com"
-									],
-									"path": [
-										"dev",
-										"departments",
-										"3"
-									]
-								}
-							},
-							"response": []
-						},
-						{
 							"name": "Create department",
 							"request": {
 								"method": "POST",
@@ -360,40 +221,6 @@
 									"path": [
 										"dev",
 										"departments"
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete department",
-							"request": {
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{authToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "formdata",
-									"formdata": []
-								},
-								"url": {
-									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/departments/3764707c-613f-44de-b24b-f2108e69d831",
-									"protocol": "https",
-									"host": [
-										"{{apiId}}",
-										"execute-api",
-										"us-east-1",
-										"amazonaws",
-										"com"
-									],
-									"path": [
-										"dev",
-										"departments",
-										"3764707c-613f-44de-b24b-f2108e69d831"
 									]
 								}
 							},
@@ -438,45 +265,6 @@
 				{
 					"name": "Employee",
 					"item": [
-						{
-							"name": "Update employee",
-							"request": {
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "Bearer {{authToken}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Lizzie Joseph\",\r\n    \"employmentDate\": \"2021-09-23T20:01:45.424Z\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/employees/7fead000-4943-4736-b256-e21d3b80e356",
-									"protocol": "https",
-									"host": [
-										"{{apiId}}",
-										"execute-api",
-										"us-east-1",
-										"amazonaws",
-										"com"
-									],
-									"path": [
-										"dev",
-										"employees",
-										"7fead000-4943-4736-b256-e21d3b80e356"
-									]
-								}
-							},
-							"response": []
-						},
 						{
 							"name": "Create employee",
 							"request": {
